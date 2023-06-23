@@ -2,6 +2,10 @@ import fastify from "fastify";
 
 const app = fastify();
 
+app.get("/", (req, res) => {
+  res.redirect("/episodes");
+});
+
 app.get("/episodes", (req, res) => {
   console.log(req);
   const episodes = [
